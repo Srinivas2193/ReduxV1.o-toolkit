@@ -33,10 +33,4 @@ export const getUsers = () => (dispatch)=>{
     .catch((err)=> dispatch(isFailure()))
 }
 
-export const getPosts = () => (dispatch)=>{
-  api.get('/posts')
-  .then((res)=>dispatch(isSuccess(res.data)))
-  .catch((err)=>console.log(err))
-}
-
 export default dataSlice.reducer;
